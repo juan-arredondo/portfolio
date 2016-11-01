@@ -1,5 +1,9 @@
 require "sinatra"
 
+get '/helo.txt' do
+  "Hello World"
+end
+
 get '/' do
-  File.read(File.join('./public/index.html'))
+  File.open('public/hello.txt')
 end
